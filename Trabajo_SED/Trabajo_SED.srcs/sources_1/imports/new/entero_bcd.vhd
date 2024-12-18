@@ -41,7 +41,7 @@ begin
         if rst = '0' then
             bcd_o <= (others => '0');  
         elsif rising_edge(clk) then
-            bcd_o(11 downto 8) <= to_unsigned(entero / 1000, 4);
+            
             bcd_o(11 downto 8) <= to_unsigned(entero / 100, 4);  
             bcd_o(7 downto 4)  <= to_unsigned(entero / 10, 4);   
             bcd_o(3 downto 0)  <= to_unsigned(entero mod 10, 4);  
